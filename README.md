@@ -46,5 +46,6 @@
 -  📜 [알아두면 쓸모있는 제미나이 CLI(Gemini CLI) 사용법](https://yozm.wishket.com/magazine/detail/3259/)
 -  📜 [바이브옵스(VibeOps)로 운영 생산성 극대화하기](https://yozm.wishket.com/magazine/detail/3325/)
 -  📜 [제미나이 CLI vs 클로드 코드: 바이브옵스(VibeOps) 관점에서 비교하기](https://yozm.wishket.com/magazine/detail/3334/)
+-  📜 [실무용 클로드 코드 프롬프트 엔지니어링 템플릿 3종](https://yozm.wishket.com/magazine/detail/3353/)
 
 
