@@ -9,4 +9,4 @@
 | **p162** | 📁 refactoring | Claude Code를 활용한 체계적인 코드 리팩토링 데모 프로젝트 |
 
 ## 참고 문서
-- **p151**: (WIP, 🏗️) [devcontainer 설명 및 실습.pdf](./here.pdf)
+- **p151**: [개발자를_위한_Dev_Container와_DevPod.pdf](./%5B%ED%81%B4%EB%A1%9C%EB%93%9C_%EC%BD%94%EB%93%9C%5D_p151_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC_%EC%9C%84%ED%95%9C_Dev_Container%EC%99%80_DevPod.pdf)
