@@ -29,6 +29,7 @@
 본 도서의 쇄(edition)별 정정 사항은 [Releases](https://github.com/sysnet4admin/_Book_Claude-Code/releases/) 에서 확인하실 수 있습니다.
 - [📑  1쇄 정오표](https://github.com/sysnet4admin/_Book_Claude-Code/releases/tag/1st-edition)
 - [📑  2쇄 정오표](https://github.com/sysnet4admin/_Book_Claude-Code/releases/tag/2nd-edition)
+- [📑  3쇄 정오표](https://github.com/sysnet4admin/_Book_Claude-Code/releases/tag/3rd-edition)
 
 ## 저자
 - ✔️   [조 훈](https://github.com/sysnet4admin)
