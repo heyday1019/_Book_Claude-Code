@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐱 고양이 나라에 오신 것을 환영합니다!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .cat-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .cat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .cat-emoji {
+            font-size: 8em;
+            text-align: center;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .cat-card:nth-child(2) .cat-emoji {
+            animation-delay: 0.5s;
+        }
+
+        .cat-card:nth-child(3) .cat-emoji {
+            animation-delay: 1s;
+        }
+
+        .cat-name {
+            font-size: 1.8em;
+            color: #667eea;
+            text-align: center;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .cat-description {
+            color: #555;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .interactive-cat {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .big-cat {
+            font-size: 15em;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.2s ease;
+            user-select: none;
+        }
+
+        .big-cat:hover {
+            transform: scale(1.1);
+        }
+
+        .big-cat:active {
+            transform: scale(0.95);
+        }
+
+        .message {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-top: 20px;
+            min-height: 40px;
+            font-weight: bold;
+        }
+
+        .paw-prints {
+            position: fixed;
+            font-size: 2em;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        @keyframes pawFade {
+            0% { opacity: 1; transform: scale(1) rotate(0deg); }
+            100% { opacity: 0; transform: scale(2) rotate(45deg); }
+        }
+
+        .footer {
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .cat-card {
+                padding: 20px;
+            }
+
+            .cat-emoji {
+                font-size: 5em;
+            }
+
+            .big-cat {
+                font-size: 10em;
+            }
+        }
+
+        .fun-fact {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .fun-fact h2 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .fun-fact p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐱 고양이 나라에 오신 것을 환영합니다! 🐱</h1>
+
+        <div class="cat-container">
+            <div class="cat-card">
+                <div class="cat-emoji">😺</div>
+                <div class="cat-name">행복한 냥이</div>
+                <div class="cat-description">
+                    항상 기분이 좋은 고양이예요. 매일 즐겁게 놀고 맛있는 간식을 먹어요!
+                </div>
+            </div>
+
+            <div class="cat-card">
+                <div class="cat-emoji">😸</div>
+                <div class="cat-name">웃는 냥이</div>
+                <div class="cat-description">
+                    언제나 웃는 얼굴로 사람들을 반겨주는 친절한 고양이랍니다.
+                </div>
+            </div>
+
+            <div class="cat-card">
+                <div class="cat-emoji">😻</div>
+                <div class="cat-name">사랑스러운 냥이</div>
+                <div class="cat-description">
+                    모두에게 사랑받는 매력적인 고양이! 하트 눈을 가지고 있어요.
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-cat">
+            <h2 style="color: #764ba2; margin-bottom: 20px; font-size: 2em;">클릭해보세요!</h2>
+            <div class="big-cat" id="interactiveCat">🐈</div>
+            <div class="message" id="message">나를 클릭해봐요!</div>
+        </div>
+
+        <div class="fun-fact">
+            <h2>🎯 고양이 재미있는 사실!</h2>
+            <p>
+                • 고양이는 하루에 평균 12-16시간을 잠으로 보냅니다. 💤<br>
+                • 고양이의 청각은 인간보다 5배 더 민감합니다. 👂<br>
+                • 고양이는 약 100가지의 다양한 소리를 낼 수 있어요. 🎵<br>
+                • 고양이의 코 무늬는 사람의 지문처럼 모두 다릅니다. 👃<br>
+                • 고양이는 달리기 할 때 최고 시속 48km까지 달릴 수 있어요! 🏃
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>🐾 고양이를 사랑하는 모든 분들께 🐾</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">만든 날짜: 2025년 10월 8일</p>
+        </div>
+    </div>
+
+    <script>
+        const interactiveCat = document.getElementById('interactiveCat');
+        const message = document.getElementById('message');
+
+        const cats = ['🐈', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾', '🐱'];
+        const messages = [
+            '야옹! 🎉',
+            '냥냥! 💕',
+            '골골골~ 😊',
+            '배고파옹! 🍽️',
+            '놀아줘옹! 🎾',
+            '좋아옹! ✨',
+            '사랑해옹! 💖',
+            '기분 좋다냥! 🌟',
+            '간식 주세요옹! 🐟',
+            '졸려옹~ 😴'
+        ];
+
+        let clickCount = 0;
+
+        interactiveCat.addEventListener('click', function(e) {
+            clickCount++;
+
+            // 고양이 모양 변경
+            const randomCat = cats[Math.floor(Math.random() * cats.length)];
+            interactiveCat.textContent = randomCat;
+
+            // 메시지 변경
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            message.textContent = randomMessage;
+
+            // 발자국 효과
+            createPawPrint(e.pageX, e.pageY);
+
+            // 특별한 이벤트 (10번 클릭마다)
+            if (clickCount % 10 === 0) {
+                celebrateCat();
+            }
+        });
+
+        function createPawPrint(x, y) {
+            const paw = document.createElement('div');
+            paw.textContent = '🐾';
+            paw.className = 'paw-prints';
+            paw.style.left = x + 'px';
+            paw.style.top = y + 'px';
+            document.body.appendChild(paw);
+
+            paw.style.animation = 'pawFade 1s ease-out forwards';
+
+            setTimeout(() => {
+                paw.remove();
+            }, 1000);
+        }
+
+        function celebrateCat() {
+            message.textContent = '🎊 축하합니다! 고양이 마스터! 🎊';
+
+            // 여러 발자국 만들기
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const x = Math.random() * window.innerWidth;
+                    const y = Math.random() * window.innerHeight;
+                    createPawPrint(x, y);
+                }, i * 100);
+            }
+        }
+
+        // 카드 클릭 이벤트
+        document.querySelectorAll('.cat-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const emoji = this.querySelector('.cat-emoji');
+                emoji.style.animation = 'none';
+                setTimeout(() => {
+                    emoji.style.animation = 'float 3s ease-in-out infinite';
+                }, 10);
+            });
+        });
+
+        // 페이지 로드시 환영 메시지
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                message.textContent = '나를 클릭해봐요! 🐾';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
