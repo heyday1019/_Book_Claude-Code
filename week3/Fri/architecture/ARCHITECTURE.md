@@ -1,1 +1,0 @@
-../../../week3/Tue/receipe/docs/ARCHITECTURE.md
